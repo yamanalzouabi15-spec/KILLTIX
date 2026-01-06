@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <title>Zombie Parkour Cubes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Zombie Parkour Cubes</h1>
+
+  <!-- HUD -->
+  <div id="hud">
+    <div id="hearts"></div>
+    <div id="gold">Gula cuber: <span id="goldAmount">0</span></div>
+  </div>
+
+  <!-- SPEL + SHOP LAYOUT -->
+  <div id="layout">
+
+    <!-- VÄNSTER: SPELET -->
+    <div id="leftSide">
+      <div id="gameWrapper">
+        <canvas id="game" width="900" height="500"></canvas>
+
+        <div id="overlay" class="hidden">
+          <div id="overlayContent">
+            <h2>BÖRJA OM</h2>
+            <p>DU KAN BÖRJA OM OM DU VILL I SPELET</p>
+            <button id="restartBtn">Kör igen</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="menu">
+        <button id="playBtn">Starta / Kör igen</button>
+      </div>
+    </div>
+
+    <!-- HÖGER: SHOP -->
+    <div id="rightSide">
+      <h2>Shop</h2>
+      <p>Gula cuber: <span id="shopGoldAmount">0</span></p>
+
+      <div class="shop-item">
+        <h3>Blått svärd</h3>
+        <p>Gör mer skada på zombizar.</p>
+        <p>Kostnad: <strong>100</strong></p>
+        <button id="buyBlueSwordBtn">Köp blått svärd</button>
+      </div>
+
+      <div class="shop-item">
+        <h3>Röd cube</h3>
+        <p>Ger flyg + osynlighet i några sekunder.</p>
+        <p>Kostnad: <strong>1000</strong></p>
+        <button id="buyRedCubeBtn">Köp röd cube</button>
+    </div>
+    </div>
+
+  </div>
+
+  <p id="controls">
+    Styrning: W A S D | Attack: F | Klara banan: döda 20 zombizar
+  </p>
+
+  <!-- MOBILKONTROLLER -->
+  <div id="mobileControls">
+    <div id="moveControls">
+      <button class="mc-btn" id="btnUp">▲</button>
+      <div>
+        <button class="mc-btn" id="btnLeft">◀</button>
+        <button class="mc-btn" id="btnDown">▼</button>
+        <button class="mc-btn" id="btnRight">▶</button>
+      </div>
+    </div>
+
+    <button class="mc-btn attack" id="btnAttack">⚔</button>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

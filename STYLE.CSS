@@ -1,0 +1,197 @@
+/* ====== GLOBALT ====== */
+
+body {
+  background: radial-gradient(circle at top, #444, #111);
+  color: #f5f5f5;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+
+/* ====== HUD ====== */
+
+#hud {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#hearts {
+  display: flex;
+  gap: 4px;
+}
+
+.heart {
+  width: 18px;
+  height: 18px;
+  background: red;
+  border-radius: 4px;
+  box-shadow: 0 0 4px rgba(0,0,0,0.6);
+}
+
+.heart.black {
+  background: #111;
+}
+
+#gold {
+  padding: 4px 10px;
+  background: rgba(0,0,0,0.4);
+  border-radius: 6px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.6);
+}
+
+/* ====== SPEL ====== */
+
+#gameWrapper {
+  position: relative;
+}
+
+#game {
+  background: #161616;
+  border-radius: 10px;
+  border: 3px solid #444;
+  box-shadow: 0 0 20px rgba(0,0,0,0.8);
+  display: block;
+}
+
+/* ====== GAME OVER ====== */
+
+#overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#overlayContent {
+  background: #222;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.8);
+}
+
+/* ====== KNAPPAR ====== */
+
+button {
+  margin: 5px;
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: none;
+  background: #2d7ff9;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+  transition: transform 0.1s, box-shadow 0.1s, background 0.1s;
+}
+
+button:hover {
+  background: #5295ff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+}
+
+button:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+}
+
+/* ====== SHOP PÅ SIDAN ====== */
+
+#layout {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+#leftSide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#rightSide {
+  width: 250px;
+  background: #272727;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.7);
+  text-align: left;
+}
+
+#rightSide h2 {
+  text-align: center;
+}
+
+.shop-item {
+  background: #333;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* ====== ÖVRIGT ====== */
+
+#controls {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #ddd;
+  opacity: 0.9;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ====== MOBILKONTROLLER ====== */
+
+#mobileControls {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  display: none; /* visas bara på mobil */
+  gap: 20px;
+  z-index: 9999;
+}
+
+#moveControls {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.mc-btn {
+  width: 60px;
+  height: 60px;
+  font-size: 28px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.2);
+  border: 2px solid #fff;
+  color: white;
+  backdrop-filter: blur(4px);
+}
+
+.attack {
+  background: rgba(255,0,0,0.4);
+  border-color: red;
+}
+
+/* Visa kontroller på mobil */
+@media (max-width: 900px) {
+  #mobileControls {
+    display: flex;
+  }
+}
+
